@@ -4,9 +4,9 @@ import css from "./FriendListItem.module.css";
 function FriendListItem({ avatar, name, isOnline }) {
   return (
     <div>
-      <img src={avatar} alt="Avatar" width="48" />
+      <img className={clsx(css.img)} src={avatar} alt="Avatar" width="48" />
       <p>{name}</p>
-      <p className={clsx(isOnline ? css.isOnline : css.isOffline)}>
+      <p className={clsx(css.status, isOnline ? css.isOnline : css.isOffline)}>
         {isOnline ? "Online" : "Offline"}
       </p>
     </div>

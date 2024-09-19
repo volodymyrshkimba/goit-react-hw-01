@@ -9,26 +9,26 @@ function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className={clsx(css.profileItem)}>
-      <div className={clsx(css.profileInfo)}>
-        <img className={clsx(css.profileImg)} src={image} alt="User avatar" />
-        <p className={clsx(css.profileName)}>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={clsx(css.card)}>
+      <div className={clsx(css.info)}>
+        <img className={clsx(css.img)} src={image} alt="User avatar" />
+        <p className={clsx(css.name)}>{name}</p>
+        <p className={clsx(css.tag)}>@{tag}</p>
+        <p className={clsx(css.location)}>{location}</p>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={clsx(css.list)}>
+        <li className={clsx(css.item)}>
+          <span className={clsx(css.statName)}>Followers</span>
+          <span className={clsx(css.statValue)}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={clsx(css.item)}>
+          <span className={clsx(css.statName)}>Views</span>
+          <span className={clsx(css.statValue)}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={clsx(css.item)}>
+          <span className={clsx(css.statName)}>Likes</span>
+          <span className={clsx(css.statValue)}>{likes}</span>
         </li>
       </ul>
     </div>
